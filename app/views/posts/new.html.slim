@@ -1,0 +1,31 @@
+.container
+  h3 class="text-centered" Create a new post
+  .row
+    .post__form.form
+      = form_for @post do |post|
+        .image-box
+          .form-group
+            h2 1. Choose an Image for Preview on Homepage
+            p = post.fields_for :attachments do |a|
+              = a.label :file
+              = a.file_field :file
+        .description-box
+          .form-group
+            h2 2. Add a short title to this post
+            = post.label :title, class: 'hidden'
+            = post.text_field :title, class: 'text-field'
+          .form-group
+            h2 3. Write a funny description what is this post about
+            = post.label :body, class: 'hidden'
+            = post.text_area :body, class: 'text-area'
+
+          .form-group
+            h2 4. Add some Photos and create a Story
+
+          .form-group
+            h2 5. Click Publish to create your Post
+            =link_to 'Cancel', posts_path, class: 'btn cancel-btn'
+            =post.submit 'Publish', class: 'btn submit-btn'
+
+
+

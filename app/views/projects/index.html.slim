@@ -1,0 +1,17 @@
+=render 'layouts/header'
+
+section class="projects-section"
+	- @projects.each do |project|
+	  .project
+	    .project-image-box
+	      - project.attachments.each do |a|
+	       =image_tag a.file.url(:large)
+	    .project-description
+	      p class="post-title" = project.title
+	      p = project.body
+	      .footer
+	        =link_to 'Read more', project_path(project), class: "read-more-link"
+
+	    .panel
+	       = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }
+	       = link_to 'Edit', edit_project_path(project)

@@ -1,0 +1,24 @@
+= render 'layouts/header'
+
+section class="intro-section"
+
+
+
+.container
+  - @posts.each do |post|
+    .row
+      .post.col-md-8.col-md-offset-2
+        .image-box
+          - post.attachments.each do |a|
+            =image_tag a.file.url(:large)
+        .description-box
+          p class="post-title" = post.title
+          p = post.body
+          .footer
+            =link_to 'Read more', post_path(post), class: "read-more-link"
+
+        .panel
+           = link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' }
+           = link_to 'Edit', edit_post_path(post)
+
+=render 'layouts/footer'

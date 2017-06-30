@@ -1,0 +1,28 @@
+.about-box, .team-box {
+	background-color: #fff;
+	max-width: 960px;
+	padding: 50px;
+	margin: 30px;
+}
+
+.undertitle-box {
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 10px;
+}
+
+.body-box  {
+	padding: 10px 0;
+}
+
+.team-wrap {
+	display:flex;
+	justify-content:center;
+	.team-item img {
+		height:250px;
+		border-radius:50%;
+		margin:20px;
+	}
+	.team-item {
+		text-align:center;
+	}
+}

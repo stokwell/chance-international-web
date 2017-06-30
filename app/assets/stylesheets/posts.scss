@@ -1,0 +1,142 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.post {
+	background: #fafafa;
+	position:relative;
+  padding:20px;
+  overflow: auto;
+  margin-top: 30px;
+
+	img {
+	    max-width:100%;
+
+	}
+  .read-more-link {
+    float:right;
+    //border: 1px solid rgba(212, 21, 4, 0.7);
+    //color:rgba(212, 21, 4, 0.7);
+    background: none;
+    &:hover {
+      //border:1px solid #d41504;
+      color:#d41504;
+    }
+  }
+
+}
+
+.post-title {
+  font-size: 24px;
+  margin:10px 0 0 ;
+  color: #464646;
+}
+
+.submit-btn,
+.read-more-link {
+  padding:5px 20px;
+  border:none;
+  background:#0071bc;
+  color:white;
+  border-radius: 4px;
+  border:none;
+  margin:0 10px;
+  font-size: 16px;
+  vertical-align: middle;
+
+}
+
+
+.panel {
+	position: absolute;
+	top:0;
+	right:0;
+	margin-right: 10px;
+
+	a {
+	  display: inline-block;
+	  text-decoration: none;
+	  color: black;
+	  margin:10px;
+	}
+}
+
+
+
+// styles for new post form
+
+
+
+.post__form {
+  width: 100%;
+  padding:50px;
+}
+
+.form-group {
+  background: #fafafa;
+  padding:30px;
+  margin:20px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.form {
+  .text-field {
+    width:100%;
+    box-sizing: border-box;
+    padding:10px;
+    font-size: 16px;
+  }
+
+  .text-area {
+    width:100%;
+    box-sizing: border-box;
+    border:none;
+    min-height: 200px;
+    padding:10px;
+    resize: vertical;
+    font-size: 16px;
+    border: 1px solid #fafafa;
+  }
+  .form-group {
+    margin:10px 0;
+  }
+}
+
+.submit-btn,
+.read-more-link {
+  padding:5px 20px;
+  border:none;
+  background:#0071bc;
+  color:white;
+  border-radius: 4px;
+  border:none;
+  margin:0 10px;
+  font-size: 16px;
+  vertical-align: middle;
+ }
+
+
+.btn {
+  border:none;
+  padding:5px 20px;
+  border-radius: 4px;
+  vertical-align: middle;
+  color:white;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background:#0071bc;
+}
+
+.cancel-btn {
+  background: tomato;
+}
+
+
+
+

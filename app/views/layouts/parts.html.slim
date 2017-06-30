@@ -1,0 +1,23 @@
+section class="recent-posts"
+ h3 class="text-centered" Recent Posts
+ - @posts.each do |post|
+  .post
+    - post.attachments.each do |a|
+      =image_tag a.file.url
+    p class="post-title" = post.title
+    p = post.body
+    =link_to 'Read more', post_path(post), class: "read-more-link"
+
+ =link_to 'All posts', posts_path
+
+section class="recent-projects"
+  h3 class="text-centered" Recent Projects
+  - @projects.each do |project|
+    .post
+      - project.attachments.each do |a|
+        =image_tag a.file.url
+      p class="post-title" = project.title
+      p = project.body
+      =link_to 'Read more', project_path(project), class: "read-more-link"
+      
+  =link_to 'All projets', projects_path     

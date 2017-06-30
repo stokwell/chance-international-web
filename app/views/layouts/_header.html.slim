@@ -1,0 +1,16 @@
+header
+  .container
+    h1 class="main-title" Chance International
+    nav class="main-nav"
+      =link_to 'Home', controller: 'pages', action: 'home'
+      =link_to 'Über uns', controller: 'pages', action: 'about'
+      =link_to 'Unsere Projekten', projects_url
+      =link_to 'Blog', posts_url
+      =link_to 'Kontakt', controller: 'pages', action: 'contact'
+      -if user_signed_in?
+        =link_to 'Admin', { controller: 'pages', action: 'admin' }, class: 'red'
+        =link_to 'Sign out', destroy_user_session_path, :method => :delete
+
+      button class="menu-btn btn" Menu
+
+

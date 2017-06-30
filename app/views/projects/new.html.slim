@@ -1,0 +1,17 @@
+.new-project-form
+  = form_for @project do |project|
+    .form-group
+      = project.label :title
+      = project.text_field :title
+    .form-group
+      = project.label :undertitle
+      = project.text_field :undertitle  
+    .form-group
+      = project.label :body
+      = project.text_area :body
+    .form-group
+      p = project.fields_for :attachments do |a|
+        = a.label :file
+        = a.file_field :file  
+    .form-group
+      =project.submit 'Publish'
