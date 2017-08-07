@@ -1,7 +1,6 @@
-
 =render 'layouts/header'
 
-.slider(data-turbolinks-permanent)
+.slider
   .slider-box
     =image_tag('vorlagen/seil.jpg')
   .slider-box
@@ -14,9 +13,8 @@
 section class="about-general"
   .container
     .row
-      .col-md-10.col-md-offset-1.wrapper
-        h2 Wer wir sind
-        p Wir sind Kultur- und Bildungsvermittler und vernetzen Organisationen und Institutionen aus Osteuropa sowie weiteren Ländern. Als Mitglied im BDP Bundesverband e.V. führen wir unsere Projekte im Auftrag unterschiedlicher Stiftungen durch. In unseren internationalen Projekten für junge Menschen sowie Fachkräfte der Jugendarbeit bedienen wir uns der Methoden der non-formalen Bildung.
+      h2 Wer wir sind
+      p Wir sind Kultur- und Bildungsvermittler und vernetzen Organisationen und Institutionen aus Osteuropa sowie weiteren Ländern. Als Mitglied im BDP Bundesverband e.V. führen wir unsere Projekte im Auftrag unterschiedlicher Stiftungen durch. In unseren internationalen Projekten für junge Menschen sowie Fachkräfte der Jugendarbeit bedienen wir uns der Methoden der non-formalen Bildung.
 
 section class="exchange"
   .container
@@ -52,9 +50,6 @@ section class="exchange"
           =link_to "Mehr erfahren", {controller: 'pages', action: 'trip'} , class: "btn btn-exchange"
 
 
-section class=""
-
-
 section class="last_posts"
   .container
     h2 class="text-centered" Neues bei uns
@@ -70,7 +65,7 @@ section class="last_posts"
 
 
 
-section class="contact-me"
+//section class="contact-me"
   .container
     .row.contact-box
       .col-md-5

@@ -32,6 +32,9 @@ class PagesController < ApplicationController
   end
 
   def admin
+    @ads = Ad.all
+    @projects = Project.all
+    @posts = Post.all
     render :admin
   end
 

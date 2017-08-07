@@ -2,14 +2,50 @@
 
 section class="admin-panel"
   .container
-    .row
-      ul class="menu-admin"
-        li
-          =link_to 'New Post', new_post_path
-        li
-          =link_to 'New Projekt', new_project_path
-        li
-          =link_to 'New Notifikation', ads_path
+    .table
+      .table-header
+        h2 Mitmachen
+        = link_to 'ADD NEW', new_ad_path
+
+      .table-body
+        - @ads.each do |ad|
+          ul
+            li
+              = ad.title
+              .btn-panel
+                = link_to 'Show', ad
+                = link_to 'Edit', edit_ad_path(ad)
+                = link_to 'Destroy', ad, data: { confirm: 'Are you sure?' }, method: :delete
+
+
+    .table
+      .table-header
+        h2 Posts
+        = link_to 'ADD NEW', new_post_path
+
+      .table-body
+        - @posts.each do |post|
+          ul
+            li
+              = post.title
+              .btn-panel
+                = link_to 'Show', post
+                = link_to 'Edit', edit_post_path(post)
+                = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
 
 
 
+    .table
+      .table-header
+        h2 Projekte
+        = link_to 'ADD NEW', new_project_path
+
+      .table-body
+        - @projects.each do |project|
+          ul
+            li
+              = project.title
+              .btn-panel
+                = link_to 'Show', project
+                = link_to 'Edit', edit_project_path(project)
+                = link_to 'Destroy', project, data: { confirm: 'Are you sure?' }, method: :delete

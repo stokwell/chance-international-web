@@ -139,4 +139,18 @@
 
 
 
+// show page
+.blog {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
 
+
+.image-box {
+	max-width: 700px;
+
+	img{
+		width:100%;
+	}
+}
