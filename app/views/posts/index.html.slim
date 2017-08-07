@@ -2,15 +2,10 @@
 
 section class="intro-section"
 
-
-
 .container
   - @posts.each do |post|
     .row
       .post.col-md-8.col-md-offset-2
-        .image-box
-          - post.attachments.each do |a|
-            =image_tag a.file.url(:large)
         .description-box
           p class="post-title" = post.title
           p = post.body

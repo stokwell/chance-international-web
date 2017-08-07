@@ -1,50 +1,43 @@
-$primary-title-color: #0071bc;
-
-.main-title {
-  text-align: center;
-  text-transform: uppercase;
-  color: $primary-title-color;
-  font-size: 3.2em;
-  margin-bottom: 0;
-}
-
-.about-general {
-  padding:50px;
-	p {
-		font-weight: 400;
-		font-size:18px;
-	}
+.wrapper {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+  padding: 40px;
 }
 
 h2 {
 	font-weight:300;
 	font-size:2em;
-	color: #0071bc;
-
+  color: #343b46;
 }
 
 h3 {
-  color: #0071bc;
   font-size: 1.4em;
-
-
+  color: #343b46;
 }
 
 .exchange {
+  .col-md-5 {
+    padding:0;
+  }
+
   .exchange-box {
     background: #fafafa;
     min-height: 270px;
-    width:100%;
-    margin-top: 20px;
-    padding: 10px 40px;
+    margin-top: 30px;
+    padding: 10px 50px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
   }
 
   .btn-exchange {
-    float: right;
-    color: $primary-title-color;
-    border-color: $primary-title-color;
-    background: none;
+    transition: all .3s ease;
+    background: #ffc713;
+    color: #343b46;
+    border: 1px solid #ffc713;
     padding: 7px 20px;
+    margin:30px 0;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+
   }
 }
 
@@ -62,12 +55,48 @@ h3 {
     color: #464646;
     font-size: 1.4em;
     font-weight: 300;
-
     }
   }
 
 
 }
 
+.column {
+  width: 50%;
+  img {
+    width:100%
+
+  }
+}
+
+//slider
+
+.slider-box {
+
+  max-height: 500px;
+
+  img {
+    width:100%;
+  }
+}
+// promoters section
+
+.promoters {
+  background: #FFF;
+  padding: 100px 0;
+}
+
+
+
+.promoters-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  img {
+    max-width: 250px;
+  }
+}
 
 

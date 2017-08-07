@@ -1,32 +1,58 @@
+
 =render 'layouts/header'
+
+.slider(data-turbolinks-permanent)
+  .slider-box
+    =image_tag('vorlagen/seil.jpg')
+  .slider-box
+    =image_tag('vorlagen/piter2.jpg')
+  .slider-box
+    =image_tag('vorlagen/print2.jpg')
+  .slider-box
+    =image_tag('vorlagen/seil.jpg')
 
 section class="about-general"
   .container
     .row
-      .col-md-8.col-md-offset-2
+      .col-md-10.col-md-offset-1.wrapper
+        h2 Wer wir sind
         p Wir sind Kultur- und Bildungsvermittler und vernetzen Organisationen und Institutionen aus Osteuropa sowie weiteren Ländern. Als Mitglied im BDP Bundesverband e.V. führen wir unsere Projekte im Auftrag unterschiedlicher Stiftungen durch. In unseren internationalen Projekten für junge Menschen sowie Fachkräfte der Jugendarbeit bedienen wir uns der Methoden der non-formalen Bildung.
 
 section class="exchange"
   .container
-    h2 class="text-centered" Was wir organisieren?
     .row
-      .col-md-10.col-md-offset-1.exchange-box.img--left
-        h3 Jugendaustausche
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        =link_to "Mehr erfahren", {controller: 'pages', action: 'exchange'} , class: "btn btn-exchange"
-      .col-md-10.col-md-offset-1.exchange-box.img--right
-        h3 Fachkräfteprogramme
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        =link_to "Mehr erfahren", {controller: 'pages', action: 'expert'} , class: "btn btn-exchange"
-      .col-md-10.col-md-offset-1.exchange-box.img--left
-        h3 Freiwilligendienst
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        =link_to "Mehr erfahren", {controller: 'pages', action: 'volunteer'} , class: "btn btn-exchange"
-      .col-md-10.col-md-offset-1.exchange-box.img--right
-        h3 Bildundsreisen
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        =link_to "Mehr erfahren", {controller: 'pages', action: 'trip'} , class: "btn btn-exchange"
+      .col-md-10.col-md-offset-1.exchange-box
+        .col-md-5
+          h3 Jugendaustausche
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          =link_to "Mehr erfahren", {controller: 'pages', action: 'exchange'} , class: "btn btn-exchange"
+        .col-md-5
 
+      .col-md-10.col-md-offset-1.exchange-box
+        .column
+          =image_tag('vorlagen/seil.jpg')
+        .column
+          h3 Fachkräfteprogramme
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          =link_to "Mehr erfahren", {controller: 'pages', action: 'expert'} , class: "btn btn-exchange"
+
+      .col-md-10.col-md-offset-1.exchange-box
+        .column.description-box
+          h3 Freiwilligendienst
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          =link_to "Mehr erfahren", {controller: 'pages', action: 'volunteer'} , class: "btn btn-exchange"
+        .column
+
+      .col-md-10.col-md-offset-1.exchange-box
+        .column
+          =image_tag('')
+        .column
+          h3 Bildundsreisen
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          =link_to "Mehr erfahren", {controller: 'pages', action: 'trip'} , class: "btn btn-exchange"
+
+
+section class=""
 
 
 section class="last_posts"
@@ -42,8 +68,7 @@ section class="last_posts"
             p = post.body
             =link_to 'Weiter lesen', post_path(post), class: "read-more-link"
 
-section class="next-projects"
-  h2 class="text-centered" Nächste Projekten
+
 
 section class="contact-me"
   .container
@@ -57,8 +82,18 @@ section class="contact-me"
         p Fon 030/ 726277 - 900 <br> E-Mail schreiben
 
 
-footer
+section class="promoters"
   .container
-    h4 Folgen sie uns:
+    .row.promoters-wrapper
+      .promoter-logo-box
+        =image_tag('logos/bdp')
+
+      .promoter-logo-box
+        =image_tag('logos/erasmus')
+
+      .promoter-logo-box
+        =image_tag('logos/drja')
 
 
+
+=render 'layouts/footer'

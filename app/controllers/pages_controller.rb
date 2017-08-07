@@ -35,4 +35,8 @@ class PagesController < ApplicationController
     render :admin
   end
 
+  def ads
+    @ads = Ad.all
+    render :ads
+  end
 end

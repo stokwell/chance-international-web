@@ -1,8 +1,6 @@
 require 'carrierwave'
 require 'carrierwave/storage/fog'
 
-
-
 CarrierWave.configure do |config|
   config.fog_provider = 'fog/aws',
   config.fog_credentials = {

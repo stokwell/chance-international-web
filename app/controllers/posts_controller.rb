@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  
+
   def index
     @posts = Post.all
   end
@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @post.attachments.build
+    @post.images.build
   end
 
   def edit
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-  def destroy 
+  def destroy
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path
@@ -40,7 +41,10 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, attachments_attributes: [:file])
+    params
+      .require(:post)
+      .permit(:title, :body, attachments_attributes: [:file],
+        images_attributes: Image.attribute_names.map(&:to_sym).push(:_destroy))
   end
 
 end
