@@ -16,3 +16,15 @@ development:
 test:
   <<: *default
   database: chance-web
+
+stanging:
+  <<: *default
+  database: chance_international
+  user: deploy
+  password: <%=ENV["DATABASE_PASSWORD"]%>
+
+production:
+  <<: *default
+  database: chance_international_production
+  user: deploy
+  password: <%=ENV["DATABASE_PASSWORD"]%>

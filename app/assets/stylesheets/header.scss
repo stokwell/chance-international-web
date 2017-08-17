@@ -13,12 +13,9 @@ header {
   align-items: center;
 
   .main-title {
-  text-align: center;
-  text-transform: uppercase;
-  color: $primary-title-color;
-  font-size: 3.2em;
-  margin-bottom: 0;
+    display: inline-block;
   }
+
 }
 
 .main-nav {

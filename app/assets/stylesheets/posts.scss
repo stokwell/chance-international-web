@@ -16,6 +16,7 @@
 	}
   .read-more-link {
     float:right;
+		color:#d41504;
     //border: 1px solid rgba(212, 21, 4, 0.7);
     //color:rgba(212, 21, 4, 0.7);
     background: none;
@@ -137,15 +138,12 @@
   background: tomato;
 }
 
-
-
 // show page
 .blog {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 }
-
 
 .image-box {
 	max-width: 700px;

@@ -2,93 +2,21 @@
 
 .slider
   .slider-box
+    h3 Jugendaustausche
     =image_tag('vorlagen/seil.jpg')
   .slider-box
+    h3 Bildungsreisen
     =image_tag('vorlagen/piter2.jpg')
   .slider-box
     =image_tag('vorlagen/print2.jpg')
+    h3 Freiwilligendienst
   .slider-box
-    =image_tag('vorlagen/seil.jpg')
-
-section class="about-general"
-  .container
-    .row
-      h2 Wer wir sind
-      p Wir sind Kultur- und Bildungsvermittler und vernetzen Organisationen und Institutionen aus Osteuropa sowie weiteren Ländern. Als Mitglied im BDP Bundesverband e.V. führen wir unsere Projekte im Auftrag unterschiedlicher Stiftungen durch. In unseren internationalen Projekten für junge Menschen sowie Fachkräfte der Jugendarbeit bedienen wir uns der Methoden der non-formalen Bildung.
-
-section class="exchange"
-  .container
-    .row
-      .col-md-10.col-md-offset-1.exchange-box
-        .col-md-5
-          h3 Jugendaustausche
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          =link_to "Mehr erfahren", {controller: 'pages', action: 'exchange'} , class: "btn btn-exchange"
-        .col-md-5
-
-      .col-md-10.col-md-offset-1.exchange-box
-        .column
-          =image_tag('vorlagen/seil.jpg')
-        .column
-          h3 Fachkräfteprogramme
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          =link_to "Mehr erfahren", {controller: 'pages', action: 'expert'} , class: "btn btn-exchange"
-
-      .col-md-10.col-md-offset-1.exchange-box
-        .column.description-box
-          h3 Freiwilligendienst
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          =link_to "Mehr erfahren", {controller: 'pages', action: 'volunteer'} , class: "btn btn-exchange"
-        .column
-
-      .col-md-10.col-md-offset-1.exchange-box
-        .column
-          =image_tag('')
-        .column
-          h3 Bildundsreisen
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu funulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          =link_to "Mehr erfahren", {controller: 'pages', action: 'trip'} , class: "btn btn-exchange"
+    h3 Fachkräfteprogramme
+    =image_tag('vorlagen/print2.jpg')
 
 
-section class="last_posts"
-  .container
-    h2 class="text-centered" Neues bei uns
-    .row
-      - @posts.each do |post|
-        .col-md-4
-          .post
-            - post.attachments.each do |a|
-              =image_tag a.file.url
-            p class="post-title" = post.title
-            p = post.body
-            =link_to 'Weiter lesen', post_path(post), class: "read-more-link"
-
-
-
-//section class="contact-me"
-  .container
-    .row.contact-box
-      .col-md-5
-        h4 Wir freuen uns auf dich!
-        p Haben wir Dein Interesse erweckt? Oder willst Du Dich an einem von unseren Projekten beteiligen? Bei Fragen stehen wir Dir jederzeit gerne zur Verfügung.
-      .col-md-5
-        h4 Deine Ansprechpartnerin
-        p Anastasia Puschkarewa <br> Projektleiterin
-        p Fon 030/ 726277 - 900 <br> E-Mail schreiben
-
-
-section class="promoters"
-  .container
-    .row.promoters-wrapper
-      .promoter-logo-box
-        =image_tag('logos/bdp')
-
-      .promoter-logo-box
-        =image_tag('logos/erasmus')
-
-      .promoter-logo-box
-        =image_tag('logos/drja')
-
-
+section class="news"
+  .containter
+    h2 Aktuelles
 
 =render 'layouts/footer'
