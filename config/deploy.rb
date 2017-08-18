@@ -3,7 +3,7 @@ lock "3.9.0"
 
 server '46.101.246.230', port: 8080, roles: [:web, :app, :db], primary: true
 
-set :application, "chance_international"
+set :application, "chance-web"
 set :repo_url, "git@github.com:stokwell/chance-web.git"
 
 set :user, 'deploy'
