@@ -8,7 +8,6 @@ require 'capistrano3/unicorn'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 
-install_plugin Capistrano::Puma
 
 # Load the SCM plugin appropriate to your project:
 #
