@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.9.0"
 
-server '46.101.246.230', port: 8080, roles: [:web, :app, :db], primary: true
+server '46.101.246.230', port: 7171, roles: [:web, :app, :db], primary: true
 
 set :application, "chance-web"
 set :repo_url, "git@github.com:stokwell/chance-web.git"
