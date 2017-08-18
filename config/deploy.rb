@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.8.0"
+lock "3.9.0"
 
 set :application, "chance-web"
 set :repo_url, "git@github.com:stokwell/chance-web.git"
