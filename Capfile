@@ -4,7 +4,9 @@ require "capistrano/deploy"
 require 'capistrano/rails'
 require 'capistrano/bundler'
 require 'capistrano/rvm'
-require 'capistrano/puma'
+require 'capistrano3/unicorn'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
 
 install_plugin Capistrano::Puma
 
