@@ -5,6 +5,7 @@ server '46.101.246.230', port: 7171, roles: [:web, :app, :db], primary: true
 
 set :application, "chance-web"
 set :repo_url, "git@github.com:stokwell/chance-web.git"
+set :stages, ["staging", "production"]
 
 set :user, 'deploy'
 set :puma_threads, [4, 16]
