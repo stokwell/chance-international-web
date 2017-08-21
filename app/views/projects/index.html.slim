@@ -1,14 +1,16 @@
 =render 'layouts/header'
 
+section class="intro projects"
+  h1 class="main-title" Wir haben schon insgesamt
+
 section class="projects-section"
-  .container
-    .projects-wrapper
-			- @projects.each do |project|
-				  .project
-				    .project-description
-					    =link_to(project_path(project)) do
-					      p class="post-title"
-					        = project.title
-					      p = project.body
+  h2 class="center" Eine Liste von unseren Projekte
+  .projects-wrapper
+	  - @projects.each do |project|
+        =link_to(project_path(project), class:'project') do
+          p = project.title
+          p = project.body
+
+
 
 =render 'layouts/footer'

@@ -1,15 +1,14 @@
 = render 'layouts/header'
 
-section class="intro-section"
+section class="intro blog"
+  h1 class="main-title" Hier finden sie die Information  über unsere Aktivitätet
 
-.container
+section class="posts-list"
   - @posts.each do |post|
-    .row
-      .post.col-md-8.col-md-offset-2
-        .description-box
-          p class="post-title" = post.title
-          p = post.body
-          .footer
-            =link_to 'Read more', post_path(post), class: "read-more-link"
+    .post
+      .description-box
+        p class="post-title" = post.title
+        p = post.body
+      =link_to 'Lesen', post_path(post), class: "btn is-pink"
 
 =render 'layouts/footer'

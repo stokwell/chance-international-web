@@ -1,0 +1,22 @@
+.btn {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 7px 20px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.is-primary {
+  background-color: #00d1b2;
+  color: #fff;
+}
+
+.is-yellow {
+  background-color: #ffdd57;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.is-pink {
+  background-color: #ff3860;
+  color: #fff;
+}

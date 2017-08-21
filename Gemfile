@@ -5,11 +5,11 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
 
-
 # Use Puma as the app server
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem "bulma-rails", "~> 0.5.1"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -57,8 +57,9 @@ gem 'dotenv-rails', require: 'dotenv/rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pg', '~> 0.18'
+  gem 'pg'
   gem 'byebug', platform: :mri
+  gem 'puma'
 end
 
 group :production do

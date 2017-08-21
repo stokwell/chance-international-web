@@ -1,51 +1,32 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.projects-intro {
-	min-height: 400px;
-	background-image: url(lamps.jpg);
-	background-size:cover;
-	background-position: 50% 50%;
 
-}
-
-.projects {
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
-	padding: 0;
-
-}
-
-.projects-header {
-	height: 160px;
-	background: #343b46;
-	display: flex;
-	align-items: center;
-	padding: 0 25px;
-	justify-content: space-between;
-
-
-	h2 {
-		color: white;
-		font-weight: bold;
-	}
-
-}
-
-.panel a:hover {
-	color: #0071bc;
-}
 
 .projects-section {
-	padding:40px;
-}
-.project {
-	.project-image-box {
-		img {
-			width:100%;
-		}
+	background-color: whitesmoke;
+	padding: 30px;
 
+	.projects-wrapper {
+		background: white;
+		border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    color: #697882;
+		margin-top:40px;
+	}
+  .project {
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
 	}
 
+}
+
+.project:hover {
+	background: #ededee;
+}
+
+.project {
 	.project-description {
 		padding:20px;
 		transition: all 100ms ease-in-out;
@@ -66,14 +47,4 @@
 		background:#0071bc;
 		color:white;
 	}
-}
-
-
-
-.project:nth-child(odd) {
-  background: #ededee;
-}
-
-.project:nth-child(even) {
-  background: #F5F5F6;
 }

@@ -1,34 +1,26 @@
-$primary-title-color: #0071bc;
-
 button {
   outline: none;
 }
 
 header {
-  //position:fixed;
+  position:fixed;
+  padding: 0 15px;
   background: white;
   width:100%;
   min-height: 60px;
   display: flex;
   align-items: center;
-
-  .main-title {
-    display: inline-block;
-  }
-
+  justify-content: space-between;
 }
 
 .main-nav {
   display:flex;
   justify-content: center;
 
-
   a {
     text-decoration: none;
     color: #343b46;
     padding: 10px 20px;
-    font-weight:bold;
-    text-transform: uppercase;
   }
 
   a:hover {
@@ -47,6 +39,19 @@ header {
     display: none;
     margin-top: 15px;
   }
+}
+
+.social-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width:34px;
+  }
+}
+
+.social-nav > * {
+  margin-right:15px;
 }
 
 

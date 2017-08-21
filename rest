@@ -53,3 +53,31 @@
 .panel
            = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }
            = link_to 'Edit', edit_project_path(project)
+
+           section class="excanges"
+             .slider
+               .slider-box
+                 .slider__title
+                   div
+                     h3 Jugendaustausche
+                   =link_to 'Mehr erfahren', { controller: 'pages', action: 'exchange' }, class: 'button is-primary'
+                 =image_tag('vorlagen/seil.jpg')
+               .slider-box
+                 .slider__title
+                   div
+                     h3 Bildungsreisen
+                   =link_to 'Mehr erfahren', { controller: 'pages', action: 'exchange' }, class: 'button is-primary'
+                 =image_tag('vorlagen/piter2.jpg')
+               .slider-box
+                 .slider__title
+                   div
+                     h3 Freiwilligendienst
+                   =link_to 'Mehr erfahren', { controller: 'pages', action: 'exchange' }, class: 'button is-primary'
+                 =image_tag('vorlagen/print2.jpg')
+
+               .slider-box
+                 .slider__title
+                   div
+                     h3 Fachkräfteprogramme
+                   =link_to 'Mehr erfahren', { controller: 'pages', action: 'exchange' }, class: 'button is-primary'
+                 =image_tag('vorlagen/print2.jpg')

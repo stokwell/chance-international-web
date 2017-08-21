@@ -1,12 +1,32 @@
-.wrapper {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
-  padding: 40px;
-}
 
-h2 {
-	font-weight:300;
-	font-size:2em;
-  color: #343b46;
+//about section
+
+.intro-text {
+  padding:30px 0 60px;
+  display: flex;
+  justify-content: center;
+
+  .intro-text-wrapper {
+    max-width:800px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 30px
+  }
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 h3 {
@@ -14,89 +34,69 @@ h3 {
   color: #343b46;
 }
 
-.exchange {
-  .col-md-5 {
-    padding:0;
+.exchanges {
+  min-height: 300px;
+  padding:  60px 30px;
+  background: #49a6ed;
+
+  .exchanges-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .exchange-box {
-    background: #fafafa;
-    min-height: 270px;
-    margin-top: 30px;
-    padding: 10px 50px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    color: #697882;
+    width: 25%;
+    margin: 0 10px;
+    padding: 0 20px 20px 20px;
   }
 
-  .btn-exchange {
-    transition: all .3s ease;
-    background: #ffc713;
-    color: #343b46;
-    border: 1px solid #ffc713;
-    padding: 7px 20px;
-    margin:30px 0;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 14px;
+
+  p {
+    margin-bottom: 20px;
 
   }
-}
 
-
-
-.contact-me {
-  margin-top: 30px;
-
-  .contact-box {
-    min-height: 270px;
-    background: #fafafa;
-    width:100%;
-    padding: 20px 40px;
-    h4 {
-    color: #464646;
-    font-size: 1.4em;
-    font-weight: 300;
-    }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
+  .btn {
+    margin-top: 15px auto;
+  }
 
 }
 
-.column {
-  width: 50%;
-  img {
-    width:100%
-
-  }
-}
-
-//slider
-
-.slider-box {
-
-  max-height: 500px;
-
-  img {
-    width:100%;
-  }
-}
 // promoters section
 
 .promoters {
   background: #FFF;
-  padding: 100px 0;
-}
+  padding:60px;
 
+  .promoters-wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+  }
 
+  .center {
+    text-align: center;
+  }
 
-.promoters-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-
-  img {
+  .promoters__img  img {
     max-width: 250px;
   }
+
 }
 
+// twits
 
+.twits {
+  min-height: 653px;
+  background-color: whitesmoke;
+}

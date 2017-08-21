@@ -1,18 +1,18 @@
 header
-
-  h2 class="main-title" CHANCE International
   nav class="main-nav"
     =link_to 'Home', controller: 'pages', action: 'home'
     =link_to 'Über uns', controller: 'pages', action: 'about'
-    =link_to 'Projekte', projects_url
-    =link_to 'Blog', posts_url
+    =link_to 'Projekte', projects_path
+    =link_to 'Blog', posts_path
     =link_to 'Kontakt', controller: 'pages', action: 'contact'
-    =link_to 'Mitmachen!', ads_url
-
-  nav class="main-nav"
+    =link_to 'Mitmachen!', ads_path
     -if user_signed_in?
       =link_to 'Admin', { controller: 'pages', action: 'admin' }, class: 'red'
       =link_to 'Sign out', destroy_user_session_path, :method => :delete
 
 
-    button class="menu-btn btn" Menu
+  nav class="social-nav"
+    =image_tag('icons/facebook.svg')
+    =image_tag('icons/vk.svg')
+    =image_tag('icons/instagram.svg')
+    =image_tag('icons/twitter.svg')
