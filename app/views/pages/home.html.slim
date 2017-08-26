@@ -41,6 +41,16 @@ section class="exchanges"
 
 
 section class="twits"
+  - TwitterApi.search_our_tweets.each do |tweet|
+    article class="tweet"
+      .tweet-header
+        =image_tag tweet.user.profile_image_url
+        p=tweet.user.name
+
+      .tweet-body
+        p =tweet.text
+
+
 
 section class="promoters"
   h3 class="center" Unsere Förderer

@@ -12,7 +12,9 @@ header
 
 
   nav class="social-nav"
-    =image_tag('icons/facebook.svg')
-    =image_tag('icons/vk.svg')
+    =link_to 'https://www.facebook.com/ChanceBerlinIJB' do
+      =image_tag('icons/facebook.svg')
+    =link_to 'https://vk.com/chanceberlin' do
+      =image_tag('icons/vk.svg')
     =image_tag('icons/instagram.svg')
     =image_tag('icons/twitter.svg')

@@ -97,6 +97,30 @@ h3 {
 // twits
 
 .twits {
+  padding:50px;
   min-height: 653px;
   background-color: whitesmoke;
+  width:100%;
+}
+
+article {
+  margin:0;
+}
+
+.tweet {
+  padding:20px;
+  background-color: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  color: #697882;
+  width: 300px;
+  display: inline-block;
+  margin: 15px;
+}
+
+.tweet-header img {
+  display: block;
+  height: 36px;
+  width: 36px;
+  border-radius: 290486px;
 }

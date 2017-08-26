@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   def post_params
     params
       .require(:post)
-      .permit(:title, :body, attachments_attributes: [:file],
+      .permit(:title, :cover, :body, attachments_attributes: [:file],
         images_attributes: Image.attribute_names.map(&:to_sym).push(:_destroy))
   end
 

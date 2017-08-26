@@ -1,25 +1,8 @@
-h1 Listing ads
+=render 'layouts/header'
 
-table
-  thead
-    tr
-      th Title
-      th Description
-      th Content
-      th
-      th
-      th
+section class="intro ads_pat"
+  h1 class="main-title" Interessant? Wollen sie an einem von unserem Projekten teilnehmen?
 
-  tbody
-    - @ads.each do |ad|
-      tr
-        td = ad.title
-        td = ad.description
-        td = ad.content
-        td = link_to 'Show', ad
-        td = link_to 'Edit', edit_ad_path(ad)
-        td = link_to 'Destroy', ad, data: { confirm: 'Are you sure?' }, method: :delete
 
-br
 
-= link_to 'New Ad', new_ad_path
+=render  'layouts/footer'

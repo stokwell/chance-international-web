@@ -81,3 +81,7 @@
                      h3 Fachkräfteprogramme
                    =link_to 'Mehr erfahren', { controller: 'pages', action: 'exchange' }, class: 'button is-primary'
                  =image_tag('vorlagen/print2.jpg')
+
+p = post.fields_for :attachments do |a|
+ = a.label :file
+ = a.file_field :file

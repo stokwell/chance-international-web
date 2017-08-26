@@ -4,9 +4,9 @@
       .image-box
         .form-group
           h2 1. Choose an Image for Preview on Homepage
-          p = post.fields_for :attachments do |a|
-            = a.label :file
-            = a.file_field :file
+          p = post.label :cover, class: 'hidden'
+          = post.file_field :cover, class: 'text-field'
+
 
       .description-box
         .form-group

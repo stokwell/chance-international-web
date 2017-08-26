@@ -1,16 +1,17 @@
 = render 'layouts/header'
 
-.blog
-  .post-header
-    .container
-      h2= @post.title
-      p= @post.body
+section class="intro" style="background-image: url(#{@post.cover.url})"
 
+section class="intro-text white"
+  .intro-text-wrapper
+    h2 class="center" =@post.title
+    p = @post.body
+
+section class="post-container"
   .post-content
-    .container
-      - @post.images.each do |i|
-        .image-box
-          =image_tag i.file.url
-          p=i.description
+    - @post.images.each do |i|
+      .image-box
+        =image_tag i.file.url
+        p=i.description
 
 = render 'layouts/footer'
