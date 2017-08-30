@@ -9,7 +9,6 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem "bulma-rails", "~> 0.5.1"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -32,15 +31,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 group :development do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-unicorn', require: false
+  gem 'capistrano',           require: false
+  gem 'capistrano-rvm',       require: false
+  gem 'capistrano-rails',     require: false
+  gem 'capistrano-bundler',   require: false
+  gem 'capistrano-passenger', require: false
 end
-
-gem 'unicorn'
-
 
 gem "slim-rails"
 gem 'carrierwave', '~> 1.0'

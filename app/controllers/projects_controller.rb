@@ -10,14 +10,12 @@ class ProjectsController < ApplicationController
   def new
     @project = Project.new
     @project.attachments.build
-    @project.ads.build
   end
 
   def create
     @project = Project.new(project_params)
     @project.save
     redirect_to projects_path
-    Rails.logger.info(@project.errors.inspect)
   end
 
   def edit
@@ -40,7 +38,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :undertitle, :body, attachments_attributes: [:file],   ads_attributes: [:id, :project_id, :title, :description, :content])
+    params.require(:project).permit(:title, :undertitle, :body, attachments_attributes: [:file],   ads_attributes: [:title, :description, :content])
   end
 
 end
