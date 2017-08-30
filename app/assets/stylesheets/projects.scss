@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.project-description {
+	min-height: 600px;
+	background-color: whitesmoke;
+	padding-top: 100px;
+}
+
+.project-ads {
+	min-height: 300px;
+	padding:50px;
+	background: #49a6ed;
+	display: flex;
+	justify-content: center;
+}
+
+.project-ad-box {
+	background-color: #fff;
+	border: 1px solid #e1e8ed;
+	border-radius: 5px;
+	color: #697882;
+
+}
+
+// Old shound be edited
 
 .projects-section {
 	background-color: whitesmoke;
@@ -46,5 +69,30 @@
 		border:none;
 		background:#0071bc;
 		color:white;
+	}
+}
+
+
+// project-form
+.project-form-wrapper {
+	padding-top:100px;
+}
+
+
+.project-form {
+
+
+	.form-group {
+		width:100%;
+
+	}
+
+	.form-control {
+		width: 100%;
+		padding: 10px;
+		border-radius: 4px;
+		border: 1px solid grey;
+		margin:10px 0;
+
 	}
 }

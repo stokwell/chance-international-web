@@ -1,0 +1,39 @@
+.container.project-form-wrapper
+  h2 Project Form
+  .project-form
+    = form_for @project, html: { class: "form-horizontal" } do |project|
+      .form-group
+        = project.label :title
+        = project.text_field :title, class: "form-control"
+
+      .form-group
+        = project.label :undertitle
+        = project.text_field :undertitle, class: "form-control"
+
+
+      .form-group
+        = project.label :body, "Description"
+        = project.text_area :body, class: "form-control", rows: "10"
+
+
+      h2 Files
+      .form-group
+        = project.fields_for :attachments do |a|
+          = a.label :file
+          = a.file_field :file
+
+      h2 Mitmachen
+      .form-group
+        = project.fields_for :ads do |ad|
+          = ad.label :title
+          = ad.text_field :title, class: "form-control"
+
+          = ad.label :description
+          = ad.text_field :description, class: "form-control"
+
+          = ad.label :content
+          = ad.text_area :content, class: "form-control", rows: "10"
+
+
+      .form-group
+        =project.submit 'Publish', class:"btn is-primary"

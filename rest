@@ -85,3 +85,6 @@
 p = post.fields_for :attachments do |a|
  = a.label :file
  = a.file_field :file
+
+
+:class => "tinymce", :rows => 40, :cols => 120

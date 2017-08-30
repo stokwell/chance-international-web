@@ -1,4 +1,13 @@
 =render 'layouts/header'
 
-.container
-  h2 Projectbeschreibung
+section class="project-description"
+  p =@project.title
+
+section class="project-ads"
+  .project-ad-box
+    -@project.ads.each do |ad|
+      p=ad.title
+
+
+
+=render 'layouts/footer'

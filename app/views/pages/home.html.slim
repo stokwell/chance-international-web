@@ -45,7 +45,7 @@ section class="twits"
     article class="tweet"
       .tweet-header
         =image_tag tweet.user.profile_image_url
-        p=tweet.user.name
+        p class="user-name"=tweet.user.name
 
       .tweet-body
         p =tweet.text
