@@ -3,11 +3,15 @@ footer {
   background-color: #343b46;
   color:white;
   padding: 30px;
-  .col-md-10 {
-    padding:0;
+  display: flex;
+  justify-content: center;
+  
+  .column {
+    padding: 30px;
   }
-
 }
+
+
 
 footer h3 {
   color:white;

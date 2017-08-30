@@ -56,12 +56,15 @@ section class="promoters"
   h3 class="center" Unsere Förderer
   .promoters-wrapper
     .column.promoters__img
-      =image_tag('logos/bdp')
+      =link_to "http://bundesverband.bdp.org/" do
+        =image_tag('logos/bdp')
 
     .column.promoters__img
-      =image_tag('logos/erasmus')
+      =link_to "https://www.jugendfuereuropa.de/" do
+        =image_tag('logos/erasmus')
 
     .column.promoters__img
-      =image_tag('logos/drja')
+      =link_to "https://www.stiftung-drja.de/" do
+        =image_tag('logos/drja')
 
 =render 'layouts/footer'
