@@ -50,6 +50,16 @@ section class="twits"
       .tweet-body
         p =tweet.text
 
+section class="next-projects"
+  .next-projects-box
+    h3 class="text-centered" Nächste Projekte
+    -@projects.each do |project|
+      p =project.title
+      p =project.project_end
+      p =project.project_start
+      p =project.place
+
+
 
 
 section class="promoters"

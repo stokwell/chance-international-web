@@ -1,9 +1,16 @@
 =render 'layouts/header'
 
-div class="intro"
+section class="intro contact"
+  h1 class="main-title" Chance International
+  //p Osloer Str. 12, 13359 Berlin, Germany
+  //p Tel.: +49 30 239 188 90
 
-.container
-  .row
-    .col-md-8.col-md-offset-2.contact
+section class="intro-text"
+  .intro-text-wrapper
+    h2 class="center" Wegbeschreibung
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .btn-wrapper
+      =link_to 'Über uns', { controller: 'pages', action: 'about' }, class: 'btn is-yellow'
 
 =render 'layouts/footer'

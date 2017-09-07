@@ -1,5 +1,4 @@
-.container.project-form-wrapper
-  h2 Project Form
+.project-form-wrapper
   .project-form
     = form_for @project, html: { class: "form-horizontal" } do |project|
       .form-group
@@ -11,27 +10,43 @@
         = project.text_field :undertitle, class: "form-control"
 
       .form-group
-        = project.label :body, "Description"
-        = project.text_area :body, class: "form-control", rows: "10"
+        = project.label :project_start
+        = project.text_field :project_start, class: "form-control"
 
-
-      h2 Files
       .form-group
-        = project.fields_for :attachments do |a|
-          = a.label :file
-          = a.file_field :file
+        = project.label :project_end
+        = project.text_field :project_end, class: "form-control"
 
-      h2 Mitmachen
       .form-group
-        = project.fields_for :ads do |ad|
-          = ad.label :title
-          = ad.text_field :title, class: "form-control"
+        = project.label :place
+        = project.text_field :place, class: "form-control"
 
-          = ad.label :description
-          = ad.text_field :description, class: "form-control"
+      .form-group
+        = project.label :project_cover
+        = project.file_field :project_cover, class: "form-control"
 
-          = ad.label :content
-          = ad.text_area :content, class: "form-control", rows: "10"
+      section class="project-wrapper"
+        .description
+          p Projektbeschreibung
+          .form-group
+            = project.label :body, "Projectbeschreibung"
+            = project.text_area :body, class: "form-control", rows: "10"
+
+        .photo
+          p Photo
+
+        .links
+          p Links
+          .form-group
+            = project.fields_for :attachments do |a|
+              = a.label :file
+              = a.file_field :file
+
+        .promoters
+          p Förderer
+
+        .requirements
+          p Bedingungen
 
 
       .form-group

@@ -73,6 +73,24 @@ h3 {
 
 }
 
+// next projects section
+
+.next-projects {
+  background: #49a6ed;
+  min-height: 400px;
+  padding:5rem;
+}
+
+.next-projects-box {
+  background-color: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  color: #697882;
+
+  margin: 0 10px;
+  padding: 0 20px 20px 20px;
+}
+
 // promoters section
 
 .promoters {
@@ -102,6 +120,8 @@ h3 {
   min-height: 653px;
   background-color: whitesmoke;
   width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 

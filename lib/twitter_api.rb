@@ -5,7 +5,7 @@ class TwitterApi
   end
 
   def self.search_our_tweets
-    client.search("#ruby", result_type: "recent").take(9)
+    client.search("#ruby", result_type: "recent").take(8)
   end
 
   def self.client

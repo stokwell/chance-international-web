@@ -1,14 +1,22 @@
-
-
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'glyphicons-halflings-regular';
+  src: font-url('glyphicons-halflings-regular.eot');
+  src: font-url('glyphicons-halflings-regular.eot?iefix') format('eot'),
+  font-url('glyphicons-halflings-regular.woff') format('woff'),
+  font-url('glyphicons-halflings-regular.ttf') format('truetype'),
+  font-url('glyphicons-halflings-regular.svg#webfont') format('svg');
 }
 
 body {
   font-size: 16px;
   color: #343b46;
   padding:0;
-  font-family: Avenir, Heveltica, Arial, san-serif;
+  //font-family: Avenir, Heveltica, Arial, san-serif;
+  font-family: 'Helvetica Neue';
 }
 
 p {
@@ -64,6 +72,14 @@ p {
 
 .projects {
   background-image: url('/assets/print2.jpg');
+}
+
+.contact {
+  background-image: url('/assets/fabrik.jpg')
+}
+
+.ads {
+  background-image: url('/assets/circle3.jpg')
 }
 
 

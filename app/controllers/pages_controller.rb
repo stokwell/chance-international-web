@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @posts = Post.all.limit(3)
-    @projects= Project.all.limit(3)
+    @projects= Project.next_projects
     render :home
   end
 

@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :undertitle, :body, attachments_attributes: [:file],   ads_attributes: [:title, :description, :content])
+    params.require(:project).permit(:title, :undertitle, :body, :project_start, :project_end, :place, :project_cover, attachments_attributes: [:file])
   end
 
 end

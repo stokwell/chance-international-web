@@ -1,13 +1,25 @@
 =render 'layouts/header'
 
-section class="project-description"
-  p =@project.title
+section class="project-wrapper"
+  .description
+    h3 Projektbeschreibung
+    p =@project.body
 
-section class="project-ads"
-  .project-ad-box
-    -@project.ads.each do |ad|
-      p=ad.title
 
+  .photo
+    - unless @project.project_cover.blank?
+      =image_tag(@project.project_cover.url)
+
+  .links
+    p Links
+
+  .promoters
+    p Förderer
+
+  .requirements
+    p Bedingungen
+    p =@project.project_end
+    p =@project.project_start
 
 
 =render 'layouts/footer'
