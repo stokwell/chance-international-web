@@ -54,10 +54,11 @@ section class="next-projects"
   .next-projects-box
     h3 class="text-centered" Nächste Projekte
     -@projects.each do |project|
-      p =project.title
-      p =project.project_end
-      p =project.project_start
-      p =project.place
+      =link_to project do
+        p =project.title
+        p =project.project_end
+        p =project.project_start
+        p =project.place
 
 
 

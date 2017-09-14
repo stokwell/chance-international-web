@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.save
+    Rails.logger.info(@project.errors.inspect) 
     redirect_to projects_path
   end
 

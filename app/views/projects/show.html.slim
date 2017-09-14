@@ -1,22 +1,29 @@
 =render 'layouts/header'
 
 section class="project-wrapper"
-  .description
-    h3 Projektbeschreibung
-    p =@project.body
+  .left-site
+    .description
+      h3 =@project.title
+      p =@project.body
+
+  .right-site
+    .photo
+      - unless @project.project_cover.blank?
+        =image_tag(@project.project_cover.url)
+
+    - unless @project.attachments.blank?
+      .links
+        p Weitere Information
+        - @project.attachments.each do |a|
+          ul
+            li =link_to a.file.file.filename, a.file.url
 
 
-  .photo
-    - unless @project.project_cover.blank?
-      =image_tag(@project.project_cover.url)
+    .project-promoters
+      p Dieser Project wurde gefördert von
 
-  .links
-    p Links
-
-  .promoters
-    p Förderer
-
-  .requirements
+section class="requirements"
+  .requirements-box
     p Bedingungen
     p =@project.project_end
     p =@project.project_start

@@ -10,8 +10,12 @@
         = project.text_field :undertitle, class: "form-control"
 
       .form-group
+        = project.label :body, "Projectbeschreibung"
+        = project.text_area :body, class: "form-control", rows: "10"
+
+      .form-group
         = project.label :project_start
-        = project.text_field :project_start, class: "form-control"
+        = project.date_select :project_start, class: "form-control"
 
       .form-group
         = project.label :project_end
@@ -25,29 +29,14 @@
         = project.label :project_cover
         = project.file_field :project_cover, class: "form-control"
 
-      section class="project-wrapper"
-        .description
-          p Projektbeschreibung
-          .form-group
-            = project.label :body, "Projectbeschreibung"
-            = project.text_area :body, class: "form-control", rows: "10"
+      .form-group
+        =select_tag "colors", "<option>Red</option><option>Green</option><option>Blue</option>".html_safe, multiple: true
 
-        .photo
-          p Photo
 
-        .links
-          p Links
-          .form-group
-            = project.fields_for :attachments do |a|
-              = a.label :file
-              = a.file_field :file
-
-        .promoters
-          p Förderer
-
-        .requirements
-          p Bedingungen
-
+      .form-group
+        = project.fields_for :attachments do |a|
+          = a.label :file
+          = a.file_field :file
 
       .form-group
         =project.submit 'Publish', class:"btn is-primary"
