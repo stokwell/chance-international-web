@@ -9,6 +9,7 @@ set :repo_url, "git@github.com:stokwell/chance-web.git"
 set :deploy_to, "/home/deploy/chance-web"
 set :deploy_user, 'deploy'
 set :rbenv_ruby, '2.2.3'
+set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
 
 # Default value for :linked_files is []
