@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.3'
+gem 'pg'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sass-rails', '~> 5.0'
@@ -42,14 +43,12 @@ end
 
 
 group :development, :test do
-  gem 'pg'
   gem 'byebug', platform: :mri
   gem 'puma'
 end
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
 
 group :development do

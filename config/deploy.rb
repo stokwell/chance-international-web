@@ -8,6 +8,8 @@ set :repo_url, "git@github.com:stokwell/chance-web.git"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/deploy/chance-web"
 set :deploy_user, 'deploy'
+set :rbenv_ruby, '2.2.3'
+set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 set :log_level, :debug
 
 
