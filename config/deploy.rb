@@ -8,6 +8,7 @@ set :repo_url, "git@github.com:stokwell/chance-web.git"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/deploy/chance-web"
 set :deploy_user, 'deploy'
+set :rvm_type, :system
 
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
@@ -19,11 +20,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart  do
     invoke 'passenger:restart'
-    end
   end
-
-
-end
 
   after :publishing, :restart
 end
