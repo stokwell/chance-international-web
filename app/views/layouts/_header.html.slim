@@ -6,6 +6,8 @@ header
     =link_to 'Blog', posts_path
     =link_to 'Kontakt', controller: 'pages', action: 'contact'
     =link_to 'Mitmachen!', ads_path
+    =link_to 'ru', { locale: :ru }
+    =link_to 'de', { locale: :de }
     -if user_signed_in?
       =link_to 'Admin', { controller: 'pages', action: 'admin' }, class: 'red'
       =link_to 'Sign out', destroy_user_session_path, :method => :delete

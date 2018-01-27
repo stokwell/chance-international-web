@@ -1,0 +1,16 @@
+= render 'layouts/header'
+
+section class="intro blog"
+  h1 class="main-title" Здесь вы найдете всю информацию!
+
+section class="posts-list"
+  h2 class="center" Aktuelle Neuigkeiten
+  - @posts.each do |post|
+    .posts-container
+      .post
+        .description-box
+          p class="post-title" = post.title
+          p =post.created_at.to_date
+        =link_to 'Lesen', post_path(post), class: "btn is-pink"
+
+=render 'layouts/footer'

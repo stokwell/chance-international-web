@@ -1,35 +1,32 @@
-.container
-  .post__form.form
-    = form_for @post do |post|
-      .image-box
-        .form-group
-          h2 1. Choose an Image for Preview on Homepage
-          p = post.label :cover, class: 'hidden'
-          = post.file_field :cover, class: 'text-field'
+= tinymce
 
+.grey
+  h1 class="text-centered" Create a new post
+  = form_for @post do |post|
+    .form-group
+      h2 1. Choose an Image for Preview on Homepage
+      p = post.label :cover
+      = post.file_field :cover
 
-      .description-box
-        .form-group
-          h2 2. Add a short title to this post
-          = post.label :title, class: 'hidden'
-          = post.text_field :title, class: 'text-field'
+    .form-group
+      h2 2. Add a short title to this post
+      = post.label :title, class: 'hidden'
+      = post.text_area :title, :rows => 20, :cols => 120
 
-        .form-group
-          h2 3. Write a funny description what is this post about
-          = post.label :body, class: 'hidden'
-          = post.text_area :body, class: 'text-area'
+    .form-group
+      h2 3. Write a funny description what is this post about
+      = post.label :body, class: 'hidden'
+      = post.text_area :body, class: 'text-area'
 
-        .form-group.images
-          h2 4. Add some Photos and create a Story
-          .images
-            = post.fields_for :images do |i|
-              = render 'image_fields', post: i
-            =link_to_add_association 'Add another photo', post, :images, form_name: 'post', class: "btn", data: { association_insertion_node: '#images', association_insertion_method: :append }
-          #images
+    .form-group.images
+      h2 4. Add some Photos and create a Story
+      .images
+        = post.fields_for :images do |i|
+          = render 'image_fields', post: i
+        =link_to_add_association 'Add another photo', post, :images, form_name: 'post', class: "btn", data: { association_insertion_node: '#images', association_insertion_method: :append }
+      #images
 
-
-
-        .form-group
-          h2 5. Click Publish to create your Post
-          =link_to 'Cancel', posts_path, class: 'btn cancel-btn'
-          =post.submit 'Publish', class: 'btn submit-btn'
+    .form-group
+      h2 5. Click Publish to create your Post
+      =link_to 'Cancel', posts_path, class: 'btn cancel-btn'
+      =post.submit 'Publish', class: 'btn submit-btn'

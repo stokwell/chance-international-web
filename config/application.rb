@@ -13,5 +13,8 @@ module ChanceWeb
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths << Rails.root.join('lib')
+    config.i18n.default_locale = :de
+    config.i18n.available_locales = [:de, :ru]
+    config.autoload_paths += Dir[Rails.root.join("app", "views", "{*/}")]
   end
 end

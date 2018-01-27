@@ -14,7 +14,7 @@
 body {
   font-size: 16px;
   color: #343b46;
-  padding:0;
+  padding: 40px 0 0;
   //font-family: Avenir, Heveltica, Arial, san-serif;
   font-family: 'Helvetica Neue';
 }
@@ -27,7 +27,7 @@ p {
 .intro {
   background-position: center 80%;
   background-size: cover;
-  height: 90vh;
+  height: 80vh;
   display:flex;
   justify-content: center;
   align-items: center;

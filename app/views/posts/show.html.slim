@@ -1,10 +1,10 @@
 = render 'layouts/header'
 
 section class="intro" style="background-image: url(#{@post.cover.url})"
+  h1 class="main-title" =@post.title
 
 section class="intro-text white"
   .intro-text-wrapper
-    h2 class="center" =@post.title
     p = @post.body
 
 section class="post-container"

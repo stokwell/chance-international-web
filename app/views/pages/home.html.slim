@@ -6,8 +6,8 @@ section class="intro home"
 section class="intro-text"
   .intro-text-wrapper
     h2 class="center" Wer sind wir
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    p CHANCE INTERNATIONAL ist ein engagiertes Team des Bildungsträgers CHANCE BJS gGmbH in Berlin. Wir sehen uns als Kultur- und Bildungsvermittler und setzen seit 2009 Projekte vor allem mit Osteuropa sowie weiteren Ländern um. Jährlich sind das ca. 18 - 20 Austausch- und Bildungsprogramme. Wir sind Mitglied im BDP Bundesverband e.V. und kooperieren mit unterschiedlichen Stiftungen und Förderern.
+    p Junge Menschen sowie Fachkräfte der Jugendarbeit laden wir ein, andere Kulturen und Methoden des non-formalen Lernens unmittelbar zu erleben. Dabei wollen wir euch eine Plattform zum Austausch und der Entwicklung gemeinsamer Ideen bieten. In unseren Projekten begrüßen wir Diversität und sind gegen jegliche Art von Diskriminierung.
     .btn-wrapper
       =link_to 'Über uns', { controller: 'pages', action: 'about' }, class: 'btn is-yellow'
 
@@ -40,25 +40,81 @@ section class="exchanges"
         =link_to 'Mehr erfahren', { controller: 'pages', action: 'expert' }, class: 'btn is-yellow'
 
 
-section class="twits"
-  - TwitterApi.search_our_tweets.each do |tweet|
-    article class="tweet"
-      .tweet-header
-        =image_tag tweet.user.profile_image_url
-        p class="user-name"=tweet.user.name
+-if @ads.any?
+  section class="recent-ads"
+    .ads-list
+      -@ads.each do |ad|
+        p =ad.title
 
-      .tweet-body
-        p =tweet.text
+
+//section class="twits"
+//  - TwitterApi.search_our_tweets.each do |tweet|
+//    article class="tweet"
+//      .tweet-header
+//        =image_tag tweet.user.profile_image_url
+//        p class="user-name"=tweet.user.name
+//
+//      .tweet-body
+//        p =tweet.text
+
+
+.section class="recent-posts"
+  //h3 class="text-centered" Aktuelles
+  .recent-posts-list
+    -@posts.each do |post|
+      =link_to post do
+        .recent-posts-container
+          .post
+            .post-image-box
+              =image_tag(post.cover.url)
+            .description-box
+              //p =post.created_at.to_date().strftime("%d.%m.%Y")
+              p class="post-title" = post.title
+
+  .link-wrapper
+    =link_to 'Mehr lesen', posts_path, class: "btn is-pink center"
+
+
+section class="faq"
+    h3 class="text-centered" Häufig gestellte Fragen
+    .faq-box.left
+      .faq-block
+        h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+      .faq-block
+        h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+      .faq-block
+        h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    .faq-box.right
+      .faq-block
+        h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+      .faq-block
+        h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+      .faq-block
+        h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+
 
 section class="next-projects"
   .next-projects-box
     h3 class="text-centered" Nächste Projekte
     -@projects.each do |project|
-      =link_to project do
-        p =project.title
-        p =project.project_end
-        p =project.project_start
-        p =project.place
+       ul
+        li =link_to project do
+          p class="project-title" =project.title
+          p class="project-info"#{project.project_end.strftime("%d.%m.%Y")} - #{project.project_start.strftime("%d.%m.%Y")}
+          p class="project-info"=project.place
 
 
 

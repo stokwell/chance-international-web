@@ -3,14 +3,17 @@
 section class="intro blog"
   h1 class="main-title" Hier finden sie die Information  über unsere Aktivitätet
 
-section class="posts-list"
-  h2 class="center" Aktuelle Neuigkeiten  
-  - @posts.each do |post|
-    .posts-container
-      .post
-        .description-box
-          p class="post-title" = post.title
-          p =post.created_at.to_date
-        =link_to 'Lesen', post_path(post), class: "btn is-pink"
+.section class="recent-posts"
+  //h3 class="text-centered" Aktuelles
+  .recent-posts-list
+    -@posts.each do |post|
+      =link_to post do
+        .recent-posts-container
+          .post
+            .post-image-box
+              =image_tag(post.cover.url)
+            .description-box
+              //p =post.created_at.to_date().strftime("%d.%m.%Y")
+              p class="post-title" = post.title
 
 =render 'layouts/footer'

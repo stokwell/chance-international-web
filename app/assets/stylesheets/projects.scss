@@ -1,35 +1,53 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.project-wrapper {
+ .project-wrapper {
 	background: whitesmoke;
 	display: flex;
-  padding: 100px 30px;
+  padding: 100px .5em;
   min-height: 700px;
+	.right-site {
+		width: 50%;
+		margin:10px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+	}
+
+	.right-site > * {
+		flex: 1;
+
+	}
+
+	.left-site {
+		background: white;
+	  width: 50%;
+		margin:10px;
+
+	}
 
 }
 
-.right-site {
-	width: 50%;
-	margin:10px;
+@media screen and (max-width: 600px) {
+  .project-wrapper {
+    flex-direction: column;
+    justify-content: center;
 
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
+		.left-site,
+		.right-site {
+			width: 100%;
+		}
 
-}
+  }
 
-.right-site > * {
-	flex: 1;
 
-}
-
-.left-site {
-	background: white;
-  width: 50%;
-	margin:10px;
 
 }
+
+
+
 
 .links {
 	background: white;
@@ -70,9 +88,6 @@
 	}
 
 }
-
-
-
 
 .project-description {
 	min-height: 600px;

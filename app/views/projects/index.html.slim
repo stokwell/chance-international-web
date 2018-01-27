@@ -9,6 +9,7 @@ section class="projects-section"
 	  - @projects.each do |project|
         =link_to(project_path(project), class:'project') do
           p = project.title
+          p class="project-info"#{project.project_end.strftime("%d.%m.%Y")} - #{project.project_start.strftime("%d.%m.%Y")}
           p = project.place
 
 

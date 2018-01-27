@@ -2,8 +2,9 @@ class PagesController < ApplicationController
   before_action :authenticate_user!, only: :admin
 
   def home
-    @posts = Post.all.limit(3)
+    @posts = Post.all.limit(6).reverse()
     @projects= Project.next_projects
+    @ads = Ad.all
     render :home
   end
 
@@ -29,6 +30,10 @@ class PagesController < ApplicationController
 
   def trip
     render :trip
+  end
+
+  def faq
+    render :faq
   end
 
   def admin

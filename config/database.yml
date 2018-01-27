@@ -2,18 +2,15 @@ development:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: stokwell
-  password: rus280280
   database: chance-web
-
+  port: 5432
 
 test:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: stokwell
-  password: rus280280
-  database: chance-web
+  database: chance-web-test
+  port: 5432
 
 
 production:
