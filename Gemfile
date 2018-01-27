@@ -32,6 +32,9 @@ gem 'rails-i18n'
 gem 'globalize', git: 'https://github.com/globalize/globalize'
 gem 'activemodel-serializers-xml'
 
+gem "koala"
+gem 'omniauth-facebook'
+
 
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'

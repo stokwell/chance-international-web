@@ -4,16 +4,16 @@ h3 class="text-centered" Chance International
 .sign-in-form
   h2 class="text-centered" Log in
 
-  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
-      = f.label :email 
-      = f.email_field :email, autofocus: true 
-    
+      = f.label :email
+      = f.email_field :email, autofocus: true
+
     .field
-      = f.label :password 
-      = f.password_field :password, autocomplete: "off" 
+      = f.label :password
+      = f.password_field :password, autocomplete: "off"
 
     .actions
       =link_to 'Sign up', new_user_registration_path, class: 'sign-up-btn'
-      = f.submit "Log in" 
-    
+      = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path
+      = f.submit "Log in"
